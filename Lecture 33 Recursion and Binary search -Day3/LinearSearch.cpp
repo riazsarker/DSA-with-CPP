@@ -7,7 +7,15 @@ bool linearSearch(int *arr, int size, int k)
     {
         return false;
     }
-    if (arr[0 == k])
+    if (arr[0] == k)
+    {
+        return true;
+    }
+    else
+    {
+        bool remainingPart = linearSearch(arr + 1, size - 1, k);
+        return remainingPart;
+    }
 }
 int main()
 {
@@ -16,5 +24,13 @@ int main()
     int key = 2;
     bool ans = linearSearch(arr, size, key);
 
+    if (ans)
+    {
+        cout << "present" << endl;
+    }
+    else
+    {
+        cout << "absent" << endl;
+    }
     return 0;
 }
