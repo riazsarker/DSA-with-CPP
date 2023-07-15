@@ -13,8 +13,12 @@ bool linearSearch(int *arr, int size, int k)
     }
     else
     {
+<<<<<<< Updated upstream
         bool remainingPart = linearSearch(arr + 1, size - 1, k);
         return remainingPart;
+=======
+        bool remaingPart =
+>>>>>>> Stashed changes
     }
 }
 int main()
